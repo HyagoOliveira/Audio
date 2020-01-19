@@ -1,0 +1,63 @@
+﻿using UnityEngine;
+
+namespace ActionCode.Audio
+{
+    /// <summary>
+    /// Component used to play, stop, pause and resume both AudioSource and ParticleSystem components attached to this GameObject.
+    /// </summary>
+    [DisallowMultipleComponent]
+    [RequireComponent(typeof(AudioSource))]
+    [RequireComponent(typeof(ParticleSystem))]
+    public class AudibleParticleSystem : MonoBehaviour
+    {
+        [SerializeField, Tooltip("The AudioSource component used to play.")]
+        protected AudioSource audioSource;
+        [SerializeField, Tooltip("The ParticleSystem component used to play.")]
+        protected ParticleSystem partSystem;
+
+        private void Reset()
+        {
+            audioSource = GetComponent<AudioSource>();
+            partSystem = GetComponent<ParticleSystem>();
+
+            audioSource.playOnAwake = partSystem.main.playOnAwake;
+            audioSource.loop = partSystem.main.loop;
+        }
+
+        /// <summary>
+        /// Plays both Audio Source and Particle System.
+        /// </summary>
+        public void Play()
+        {
+            audioSource.Play();
+            partSystem.Play();
+        }
+
+        /// <summary>
+        /// Stops both Audio Source and Particle System.
+        /// </summary>
+        public void Stop()
+        {
+            audioSource.Stop();
+            partSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        }
+
+        /// <summary>
+        /// Pauses both Audio Source and Particle System.
+        /// </summary>
+        public void Pause()
+        {
+            audioSource.Pause();
+            partSystem.Pause();
+        }
+
+        /// <summary>
+        /// Plays both Audio Source and Particle System if they are not playing.
+        /// </summary>
+        public void Resume()
+        {
+            if (!audioSource.isPlaying) audioSource.Play();
+            if (!partSystem.isPlaying) partSystem.Play();
+        }
+    }
+}
