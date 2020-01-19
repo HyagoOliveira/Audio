@@ -6,7 +6,7 @@ Preset:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AE Frequently Played
+  m_Name: AudioClipPreset-FrequentlyPlayed
   m_TargetType:
     m_NativeTypeID: 1020
     m_ManagedTypePPtr: {fileID: 0}
