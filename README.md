@@ -7,7 +7,9 @@
 * Unity version: 2017.1
 
 ### What can I do with it? ###
-
+* **AudibleParticleSystem**: component used to play, stop, pause and resume both **AudioSource** and **ParticleSystem** components attached to the **GameObject**.
+* **AudioSourceDictionary**: plays audio clips shots using an **AudioSource** component and an **AudioClip** array.
+* **Presets**: presets assets for **background** music, **frequently** and **rarely** played audio clips.
 
 ### How do I get set up? ###
 * You can download this repo and place it inside your Unity project (the simplest way).
