@@ -1,0 +1,14 @@
+{
+  "name": "com.actioncode.audio",
+  "displayName": "ActionCode-Audio",
+  "version": "0.0.1",
+  "unity": "2017.1",
+  "description": "This package contains Audio components and presets.",
+  "keywords": [
+    "Audio",
+    "Script"
+  ],
+  "category": "Audio",
+  "author": "Hyago Oliveira",
+  "homepage": "https://bitbucket.org/nostgameteam/audio#readme"
+}
