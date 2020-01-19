@@ -3,7 +3,7 @@
 ### What is this package for? ###
 
 * This package contains scripts for Audio components and presets for Unity projects
-* Current Version: 0.0.1
+* Current Version: 1.0.0
 * Unity version: 2017.1
 
 ### What can I do with it? ###
