@@ -14,6 +14,8 @@ namespace ActionCode.Audio
         protected AudioSource audioSource;
         [SerializeField, Tooltip("The ParticleSystem component used to play.")]
         protected ParticleSystem partSystem;
+        [SerializeField, Tooltip("Other behaviours to enable when play.")]
+        protected Behaviour[] otherBehaviours;
 
         private void Reset()
         {
@@ -31,6 +33,7 @@ namespace ActionCode.Audio
         {
             audioSource.Play();
             partSystem.Play();
+            EnableBehaviours(true);
         }
 
         /// <summary>
@@ -40,6 +43,19 @@ namespace ActionCode.Audio
         {
             audioSource.Stop();
             partSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            EnableBehaviours(false);
+        }
+
+        /// <summary>
+        /// Enables <see cref="otherBehaviours"/>.
+        /// </summary>
+        /// <param name="enabled">True to enable, false otherwise.</param>
+        public void EnableBehaviours(bool enabled)
+        {
+            foreach (Behaviour component in otherBehaviours)
+            {
+                component.enabled = enabled;
+            }
         }
 
         /// <summary>
@@ -57,7 +73,11 @@ namespace ActionCode.Audio
         public void Resume()
         {
             if (!audioSource.isPlaying) audioSource.Play();
-            if (!partSystem.isPlaying) partSystem.Play();
+            if (!partSystem.isPlaying)
+            {
+                partSystem.Play();
+                EnableBehaviours(true);
+            }
         }
     }
 }
