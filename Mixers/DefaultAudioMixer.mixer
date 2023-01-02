@@ -83,7 +83,7 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: a167a4238608ebe46a18d41952e6f6bb
-    name: AmbientEffectVolume
+    name: AmbientEffectsVolume
   - guid: a973c776455edb94b84e7d6f5b7535bf
     name: BackgroundVolume
   - guid: 6a1277ade53aa1e41afc810d4d90da98
