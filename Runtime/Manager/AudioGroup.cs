@@ -38,8 +38,8 @@ namespace ActionCode.Audio
                 mixer.SetFloat(volumeParamName, LinearToDecibel(value));
                 slider.SetValueWithoutNotify(value);
 
-                var displayedText = (int)(value * 10);
-                sliderValue.text = displayedText.ToString("D2");
+                var integerValue = (int)(value * 10);
+                sliderValue.text = integerValue.ToString("D2");
             }
         }
 
@@ -65,22 +65,10 @@ namespace ActionCode.Audio
             slider.onValueChanged.RemoveListener(HandleSliderValueChanged);
         }
 
-        private void EnableVolume()
-        {
-            Volume = 1F;
-            slider.interactable = true;
-        }
-
-        public void DisableVolume()
-        {
-            Volume = 0F;
-            slider.interactable = false;
-        }
-
         private void HandleToggleValueChanged(bool enabled)
         {
-            if (enabled) EnableVolume();
-            else DisableVolume();
+            slider.interactable = enabled;
+            Volume = enabled ? 1F : 0F;
         }
 
         private void HandleSliderValueChanged(float value) => Volume = value;
