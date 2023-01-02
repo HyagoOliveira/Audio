@@ -1,6 +1,6 @@
 # Audio
 
-* Scripts for Audio components and presets for Unity projects
+* Audio scripts and presets.
 * Unity minimum version: **2018.3**
 * Current version: **1.1.0**
 * License: **MIT**
