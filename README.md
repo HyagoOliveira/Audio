@@ -1,24 +1,40 @@
 # Audio
 
-### What is this package for? ###
+* Scripts for Audio components and presets for Unity projects
+* Unity minimum version: **2018.3**
+* Current version: **1.1.0**
+* License: **MIT**
 
-* This package contains scripts for Audio components and presets for Unity projects
-* Minimal Unity version: 2018.3
+## How To Use
 
-### What can I do with it? ###
 * **AudibleParticleSystem**: component used to play, stop, pause and resume both **AudioSource** and **ParticleSystem** components attached to the **GameObject**.
 * **AudioSourceDictionary**: plays audio clips shots using an **AudioSource** component and an **AudioClip** array.
 * **Presets**: presets assets for **background** music, **frequently** and **rarely** played audio clips.
 
-### How do I get set up? ###
-* Using the **Package Registry Server**:
-	* Add this line before ```dependencies``` node:
-		* ```"scopedRegistries": [ { "name": "Action Code", "url": "http://34.83.179.179:4873/", "scopes": [ "com.actioncode" ] } ],```
-	* The package **ActionCode-Audio** will be avaliable for you to intall using the **Package Manager** windows.
-* By **Git URL** (you'll need a **Git client** installed on your machine):
-	* Add this line inside ```dependencies``` node: 
-		* ```"com.actioncode.audio":"https://bitbucket.org/nostgameteam/audio.git"```
+## Installation
 
-### Who do I talk to? ###
+### Using the Package Registry Server
 
-* Repo owner and admin: **Hyago Oliveira** (hyagogow@gmail.com)
+Follow the instructions inside [here](https://cutt.ly/ukvj1c8) and the package **ActionCode-Audio** 
+will be available for you to install using the **Package Manager** windows.
+
+### Using the Git URL
+
+You will need a **Git client** installed on your computer with the Path variable already set. 
+
+- Use the **Package Manager** "Add package from git URL..." feature and paste this URL: `https://github.com/HyagoOliveira/Audio.git`
+
+- You can also manually modify you `Packages/manifest.json` file and add this line inside `dependencies` attribute: 
+
+```json
+"com.actioncode.energy-system":"https://github.com/HyagoOliveira/Audio.git"
+```
+
+---
+
+**Hyago Oliveira**
+
+[GitHub](https://github.com/HyagoOliveira) -
+[BitBucket](https://bitbucket.org/HyagoGow/) -
+[LinkedIn](https://www.linkedin.com/in/hyago-oliveira/) -
+<hyagogow@gmail.com>

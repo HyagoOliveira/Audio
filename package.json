@@ -9,11 +9,14 @@
     "presets"
   ],
   "category": "Audio",
-  "homepage": "https://bitbucket.org/nostgameteam/audio#readme",
+  "homepage": "https://github.com/HyagoOliveira/Audio#readme",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:nostgameteam/audio.git"
+    "url": "https://github.com/HyagoOliveira/Audio.git"
   },
+  "documentationUrl": "https://github.com/HyagoOliveira/Audio#readme",
+  "changelogUrl": "https://github.com/HyagoOliveira/Audio/CHANGELOG.md",
   "author": {
     "name": "Hyago Oliveira",
     "email": "hyagogow@gmail.com"
