@@ -40,21 +40,21 @@ namespace ActionCode.Audio
 	    }
 	    
 	    /// <summary>
-	    /// Gets a audio clip using the given index.
+	    /// Gets an audio clip using the given index.
 	    /// </summary>
 	    /// <param name="index">The index of the audio clip. No checking is done.</param>
 	    /// <returns>An <see cref="AudioClip"/> instance or <see cref="IndexOutOfRangeException"/>.</returns>
 	    public AudioClip GetClip(int index) => clips[index];
 	    
 	    /// <summary>
-	    /// Gets a audio clip using the given name.
+	    /// Gets an audio clip using the given name.
 	    /// </summary>
 	    /// <param name="name">The name of the audio clip. No checking is done.</param>
 	    /// <returns>An <see cref="AudioClip"/> instance or <see cref="KeyNotFoundException"/>.</returns>
 	    public AudioClip GetClip(string name) => audioDictionary[name];
 	    
 	    /// <summary>
-	    /// Tries to get a audio clip using the given name.
+	    /// Tries to get an audio clip using the given name.
 	    /// </summary>
 	    /// <param name="name">The name of audio clip.</param>
 	    /// <param name="clip">The Audio Clip instance found.</param>
