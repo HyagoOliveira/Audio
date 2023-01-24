@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.0] - 2023-01-24
+
 ### Changed
 - AudioSourceDictionary uses AudioDictionary class.
 
@@ -29,6 +31,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add initial files
 - Initial commit
 
-[Unreleased]: https://github.com/HyagoOliveira/Audio/compare/1.1.0...main
+[Unreleased]: https://github.com/HyagoOliveira/Audio/compare/2.0.0...main
+[2.0.0]: https://github.com/HyagoOliveira/Audio/tree/2.0.0/
 [1.1.0]: https://github.com/HyagoOliveira/Audio/tree/1.1.0/
 [1.0.0]: https://github.com/HyagoOliveira/Audio/tree/1.0.0/
