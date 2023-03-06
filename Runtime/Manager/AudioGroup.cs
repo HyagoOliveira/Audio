@@ -43,8 +43,8 @@ namespace ActionCode.Audio
             }
         }
 
-        private const float maxValumeDB = 20F;
-        private const float minValumeDB = -80F;
+        private const float maxVolumeDB = 20F;
+        private const float minVolumeDB = -80F;
 
         private void Reset()
         {
@@ -73,10 +73,14 @@ namespace ActionCode.Audio
 
         private void HandleSliderValueChanged(float value) => Volume = value;
 
-        private static float DecibelToLinear(float value) => Mathf.Pow(10F, value / maxValumeDB);
+        private static float DecibelToLinear(float value) => Mathf.Pow(10F, value / maxVolumeDB);
 
-        private static float LinearToDecibel(float value) => value > 0F ?
-            Mathf.Log10(value) * maxValumeDB :
-            minValumeDB;
+        private static float LinearToDecibel(float value)
+        {
+            var hasValue = value > 0F;
+            return hasValue ?
+                Mathf.Log10(value) * maxVolumeDB :
+                minVolumeDB;
+        }
     }
 }
