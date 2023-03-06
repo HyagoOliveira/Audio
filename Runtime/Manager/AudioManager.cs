@@ -15,6 +15,8 @@ namespace ActionCode.Audio
         private AudioGroup soundEffectsGroup;
         [SerializeField, Tooltip("The Ambient Effects Group inside the AudioMixer asset.")]
         private AudioGroup ambiemtEffectsGroup;
+        [SerializeField, Tooltip("The Voice Effects Group inside the AudioMixer asset.")]
+        private AudioGroup voiceEffectsGroup;
 
         private void Awake() => Load(new AudioManagerData());
 
@@ -24,9 +26,10 @@ namespace ActionCode.Audio
         /// <param name="data">The audio data to load.</param>
         public void Load(AudioManagerData data)
         {
-            if (backgroundGroup) backgroundGroup.Volume = data.backgroundValume;
-            if (soundEffectsGroup) soundEffectsGroup.Volume = data.soundEffectsValume;
-            if (ambiemtEffectsGroup) ambiemtEffectsGroup.Volume = data.ambientEffectsValume;
+            if (backgroundGroup) backgroundGroup.Volume = data.BackgroundVolume;
+            if (soundEffectsGroup) soundEffectsGroup.Volume = data.SoundEffectsVolume;
+            if (ambiemtEffectsGroup) ambiemtEffectsGroup.Volume = data.AmbientEffectsVolume;
+            if (voiceEffectsGroup) voiceEffectsGroup.Volume = data.AmbientEffectsVolume;
         }
 
         /// <summary>
@@ -35,9 +38,10 @@ namespace ActionCode.Audio
         /// <param name="data">The audio data to save.</param>
         public void Save(ref AudioManagerData data)
         {
-            if (backgroundGroup) data.backgroundValume = backgroundGroup.Volume;
-            if (soundEffectsGroup) data.soundEffectsValume = soundEffectsGroup.Volume;
-            if (ambiemtEffectsGroup) data.ambientEffectsValume = ambiemtEffectsGroup.Volume;
+            if (backgroundGroup) data.BackgroundVolume = backgroundGroup.Volume;
+            if (soundEffectsGroup) data.SoundEffectsVolume = soundEffectsGroup.Volume;
+            if (ambiemtEffectsGroup) data.AmbientEffectsVolume = ambiemtEffectsGroup.Volume;
+            if (voiceEffectsGroup) data.VoiceEffectsVolume = voiceEffectsGroup.Volume;
         }
     }
 }

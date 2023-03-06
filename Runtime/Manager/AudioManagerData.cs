@@ -8,8 +8,9 @@ namespace ActionCode.Audio
     [Serializable]
     public sealed class AudioManagerData
     {
-        public float backgroundValume = 1F;
-        public float soundEffectsValume = 1F;
-        public float ambientEffectsValume = 1F;
+        public float BackgroundVolume { get; set; } = 1F;
+        public float SoundEffectsVolume { get; set; } = 1F;
+        public float AmbientEffectsVolume { get; set; } = 1F;
+        public float VoiceEffectsVolume { get; set; } = 1F;
     }
 }
