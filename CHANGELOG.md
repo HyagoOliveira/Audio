@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- Add VoiceEffects into DefaultAudioMixer
+
 ### Changed
 - Remove DisallowMultipleComponent attribute from AudioSourceDictionary
 
