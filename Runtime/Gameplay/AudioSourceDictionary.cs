@@ -5,17 +5,16 @@ namespace ActionCode.Audio
     /// <summary>
     /// Plays audio clips shots using an <see cref="AudioSource"/> component and an <see cref="AudioDictionary"/>.
     /// </summary>
-	[DisallowMultipleComponent]
     [RequireComponent(typeof(AudioSource))]
-    public sealed class AudioSourceDictionary : MonoBehaviour 
-	{
+    public sealed class AudioSourceDictionary : MonoBehaviour
+    {
         [SerializeField, Tooltip("The local AudioSource component used to play audio shots.")]
         private AudioSource source;
         [field: SerializeField, Tooltip("The Audio Clip Dictionary.")]
         public AudioDictionary Dictionary { get; private set; }
-        
+
         private void Reset() => source = GetComponent<AudioSource>();
-        private void Awake () => Dictionary.Initialize(); 
+        private void Awake() => Dictionary.Initialize();
 
         /// <summary>
         /// Plays an audio clip using the given index.
@@ -33,7 +32,7 @@ namespace ActionCode.Audio
         /// Plays a random audio clip.
         /// </summary>
         public void PlayRandom() => source.PlayOneShot(Dictionary.GetRandomClip());
-        
+
         /// <summary>
         /// Pauses the Audio Source.
         /// </summary>

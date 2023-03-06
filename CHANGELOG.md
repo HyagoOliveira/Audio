@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+- Remove DisallowMultipleComponent attribute from AudioSourceDictionary
+
 ## [2.0.0] - 2023-01-24
 
 ### Changed
