@@ -20,8 +20,6 @@ namespace ActionCode.Audio
             slider = GetComponent<Slider>();
         }
 
-        private void Start() => slider.SetValueWithoutNotify(audioGroup.Volume);
-
         private void OnEnable()
         {
             slider.onValueChanged.AddListener(HandleValueChanged);
@@ -34,8 +32,16 @@ namespace ActionCode.Audio
             audioGroup.OnInteractableChanged -= HandleInteractableChanged;
         }
 
+        protected override void SetInitialValue() =>
+            slider.SetValueWithoutNotify(audioGroup.Volume);
+
         private void HandleValueChanged(float volume) => audioGroup.Volume = volume;
-        private void HandleInteractableChanged(bool interactable) => slider.interactable = interactable;
+
+        private void HandleInteractableChanged(bool interactable)
+        {
+            slider.interactable = interactable;
+            slider.SetValueWithoutNotify(audioGroup.Volume);
+        }
     }
 }
 #endif

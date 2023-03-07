@@ -23,6 +23,9 @@ namespace ActionCode.Audio
         private void OnEnable() => toggle.onValueChanged.AddListener(HandleValueChanged);
         private void OnDisable() => toggle.onValueChanged.RemoveListener(HandleValueChanged);
 
+        protected override void SetInitialValue() =>
+            toggle.SetIsOnWithoutNotify(audioGroup.Interactable);
+
         private void HandleValueChanged(bool enabled) => audioGroup.Interactable = enabled;
     }
 }

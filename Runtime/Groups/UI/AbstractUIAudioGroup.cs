@@ -11,5 +11,8 @@ namespace ActionCode.Audio
         protected AudioGroup audioGroup;
 
         protected virtual void Reset() => audioGroup = GetComponentInParent<AudioGroup>();
+        protected virtual void Start() => SetInitialValue();
+
+        protected abstract void SetInitialValue();
     }
 }
