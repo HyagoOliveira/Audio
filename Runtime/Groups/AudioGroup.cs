@@ -7,15 +7,21 @@ namespace ActionCode.Audio
     /// <summary>
     /// Component for Audio Groups.
     /// </summary>
+    [DisallowMultipleComponent]
     public sealed class AudioGroup : MonoBehaviour
     {
         [SerializeField, Tooltip("Your game AudioMixer asset.")]
         private AudioMixer mixer;
-        [SerializeField, Tooltip("The Volume Exposed Parameter name inside the AudioMixer asset.")]
-        private string volumeParamName;
+        [Tooltip("The Volume Exposed Parameter name inside the AudioMixer asset.")]
+        public string volumeParamName;
 
         public event Action<float> OnVolumeChanged;
         public event Action<bool> OnInteractableChanged;
+
+        /// <summary>
+        /// Your game AudioMixer asset.
+        /// </summary>
+        public AudioMixer Mixer => mixer;
 
         /// <summary>
         /// The Volume in linear range (0F -> 1F).
