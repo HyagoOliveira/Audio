@@ -3,10 +3,10 @@ using UnityEngine;
 namespace ActionCode.Audio
 {
     /// <summary>
-    /// Manager for Audio.
+    /// Manager for <see cref="AudioGroup"/> components.
     /// </summary>
     [DisallowMultipleComponent]
-    public sealed class AudioManager : MonoBehaviour
+    public sealed class AudioGroupManager : MonoBehaviour
     {
         [Header("Groups")]
         [SerializeField, Tooltip("The Background Group inside the AudioMixer asset.")]

@@ -18,7 +18,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Remove DisallowMultipleComponent attribute from AudioSourceDictionary
 - Remove UI Components from AudioGroup
 - If possible, draws AudioGroup.volumeParamName as a Popup field
-- Rename class AudioManagerData -> AudioData
+- Rename AudioManagerData -> AudioData
+- Rename AudioManager -> AudioGroupManager
 
 ### Removed
 - Text Mesh Pro package dependency
