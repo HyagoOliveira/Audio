@@ -17,6 +17,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Remove DisallowMultipleComponent attribute from AudioSourceDictionary
 - Remove UI Components from AudioGroup
 
+### Removed
+- Text Mesh Pro package dependency
+
 ## [2.0.0] - 2023-01-24
 
 ### Changed

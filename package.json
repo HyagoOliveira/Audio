@@ -20,8 +20,5 @@
   "author": {
     "name": "Hyago Oliveira",
     "email": "hyagogow@gmail.com"
-  },
-  "dependencies": {
-    "com.unity.textmeshpro": "1.0.0"
   }
 }
