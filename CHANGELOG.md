@@ -8,9 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Add VoiceEffects into DefaultAudioMixer
+- Add OnVolumeChanged and OnInteractableChanged into AudioGroup
 
 ### Changed
 - Remove DisallowMultipleComponent attribute from AudioSourceDictionary
+- Remove UI Components from AudioGroup
 
 ## [2.0.0] - 2023-01-24
 
