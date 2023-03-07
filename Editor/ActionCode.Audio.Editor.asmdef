@@ -1,0 +1,18 @@
+{
+    "name": "ActionCode.Audio.Editor",
+    "rootNamespace": "ActionCode.Audio.Editor",
+    "references": [
+        "GUID:f59d7605d4cbf89469c7b6e0071577a6"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
