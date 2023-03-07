@@ -7,8 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
-- Add VoiceEffects into DefaultAudioMixer
-- Add OnVolumeChanged and OnInteractableChanged into AudioGroup
+- VoiceEffects into DefaultAudioMixer
+- OnVolumeChanged and OnInteractableChanged into AudioGroup
+- SliderAudioGroup component
 
 ### Changed
 - Remove DisallowMultipleComponent attribute from AudioSourceDictionary
