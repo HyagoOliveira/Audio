@@ -108,7 +108,7 @@ AudioMixerController:
   - guid: 6a1277ade53aa1e41afc810d4d90da98
     name: SoundEffectsVolume
   - guid: a7d5347ac81a2f34c891fe6e16b90a3f
-    name: VoicesEffectsVolume
+    name: VoiceEffectsVolume
   m_AudioMixerGroupViews:
   - guids:
     - 2d99dc780e72dc04fa73f82577dbc915
