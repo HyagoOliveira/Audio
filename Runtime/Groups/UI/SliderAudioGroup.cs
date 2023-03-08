@@ -15,12 +15,26 @@ namespace ActionCode.Audio
         private Slider slider;
 
         private void Reset() => slider = GetComponent<Slider>();
-        private void OnEnable() => slider.onValueChanged.AddListener(HandleValueChanged);
-        private void OnDisable() => slider.onValueChanged.RemoveListener(HandleValueChanged);
 
-        protected override void SetInitialValue() => slider.SetValueWithoutNotify(settings.Volume);
+        private void OnEnable()
+        {
+            settings.OnVolumeChanged += HandleVolumeChanged;
+            slider.onValueChanged.AddListener(HandleValueChanged);
+        }
+
+        private void OnDisable()
+        {
+            settings.OnVolumeChanged -= HandleVolumeChanged;
+            slider.onValueChanged.RemoveListener(HandleValueChanged);
+        }
+
+        protected override void SetInitialValue() => SetSliderToVolume();
+
+        private void HandleVolumeChanged() => SetSliderToVolume();
 
         private void HandleValueChanged(float volume) => settings.Volume = volume;
+
+        private void SetSliderToVolume() => slider.SetValueWithoutNotify(settings.Volume);
     }
 }
 #endif
