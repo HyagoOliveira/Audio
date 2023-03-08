@@ -43,6 +43,8 @@ namespace ActionCode.Audio
             }
         }
 
+        private const float noVolumeLN = 0F;
+        private const float defaultVolumeLN = 1F;
         private const float maxVolumeDB = 20F;
         private const float minVolumeDB = -80F;
 
@@ -50,7 +52,12 @@ namespace ActionCode.Audio
         /// Checks if the Audio Group has Volume.
         /// </summary>
         /// <returns>Whether the Audio Group has Volume.</returns>
-        public bool HasVolume() => !Mathf.Approximately(Volume, 0f);
+        public bool HasVolume() => !Mathf.Approximately(Volume, noVolumeLN);
+
+        /// <summary>
+        /// Resets the <see cref="Volume"/> to its default value.
+        /// </summary>
+        public void ResetVolume() => Volume = defaultVolumeLN;
 
         private static float DecibelToLinear(float value) => Mathf.Pow(10F, value / maxVolumeDB);
 
