@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - ToggleAudioGroup component
 - AudioSourceAudioGroup component
 - AudioSourceExtension
+- AudioGroupSettings
 
 ### Changed
 - Remove DisallowMultipleComponent attribute from AudioSourceDictionary
