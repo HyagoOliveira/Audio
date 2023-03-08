@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d604e2d4351be84286e2f1eb684d1dc, type: 3}
+  m_Name: AudioSettings
+  m_EditorClassIdentifier: 
+  backgroundGroup: {fileID: 11400000, guid: 425e57feddc5f094888ee2bf1b592968, type: 2}
+  soundEffectsGroup: {fileID: 11400000, guid: 285733a37b056ba49a317a380845fc29, type: 2}
+  ambientEffectsGroup: {fileID: 11400000, guid: 895159f1fe73e5d419e773a0a8e81284,
+    type: 2}
+  voiceEffectsGroup: {fileID: 11400000, guid: 890816b9cfd0d8d48b2827525e85d7cf, type: 2}
+  defaultSnapshot: {fileID: 24500006, guid: 0022ba3259db5744ba63b481bb8f1971, type: 2}
+  noEffectsSnapshot: {fileID: -8243054134780536814, guid: 0022ba3259db5744ba63b481bb8f1971,
+    type: 2}
