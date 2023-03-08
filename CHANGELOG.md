@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - OnVolumeChanged and OnInteractableChanged into AudioGroup
 - SliderAudioGroup component
 - TextMeshProAudioGroup component
-- ToggleAudioGroup component
 - AudioSourceAudioGroup component
 - AudioSourceExtension
 - AudioGroupSettings
