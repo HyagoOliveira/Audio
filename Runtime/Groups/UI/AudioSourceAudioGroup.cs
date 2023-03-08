@@ -15,6 +15,7 @@ namespace ActionCode.Audio
         {
             base.Reset();
             audioSource = GetComponent<AudioSource>();
+            audioSource.SetSpatialBlendTo2D();
         }
 
         private void OnEnable() => audioGroup.OnVolumeChanged += HandleVolumeChanged;
