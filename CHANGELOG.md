@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - TextMeshProAudioGroup component
 - ToggleAudioGroup component
 - AudioSourceAudioGroup component
+- AudioSourceExtension
 
 ### Changed
 - Remove DisallowMultipleComponent attribute from AudioSourceDictionary
