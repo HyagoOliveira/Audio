@@ -3,7 +3,7 @@ using UnityEngine;
 namespace ActionCode.Audio
 {
     /// <summary>
-    /// Plays an <see cref="AudioSource"/> when the <see cref="AudioGroup.Volume"/> changes.
+    /// Plays an <see cref="AudioSource"/> when the <see cref="AudioGroupSettings.Volume"/> changes.
     /// </summary>
     [DisallowMultipleComponent]
     [RequireComponent(typeof(AudioSource))]
@@ -11,22 +11,20 @@ namespace ActionCode.Audio
     {
         [SerializeField] private AudioSource audioSource;
 
-        protected override void Reset()
+        private void Reset()
         {
-            base.Reset();
             audioSource = GetComponent<AudioSource>();
             audioSource.SetSpatialBlendTo2D();
         }
 
-        private void OnEnable() => audioGroup.OnVolumeChanged += HandleVolumeChanged;
-        private void OnDisable() => audioGroup.OnVolumeChanged -= HandleVolumeChanged;
+        private void OnEnable() => settings.OnVolumeChanged += HandleVolumeChanged;
+        private void OnDisable() => settings.OnVolumeChanged -= HandleVolumeChanged;
 
         protected override void SetInitialValue() { }
 
-        private void HandleVolumeChanged(float volume)
+        private void HandleVolumeChanged()
         {
-            var hasVolume = !Mathf.Approximately(volume, 0f);
-            var canPlay = hasVolume && !audioSource.isPlaying;
+            var canPlay = settings.HasVolume() && !audioSource.isPlaying;
             if (canPlay) audioSource.Play();
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ActionCode.Audio
 {
     /// <summary>
-    /// UI Text Mesh Pro component showing the <see cref="AudioGroup.Volume"/>.
+    /// UI Text Mesh Pro component showing the <see cref="AudioGroupSettings.Volume"/>.
     /// </summary>
     [DisallowMultipleComponent]
     [RequireComponent(typeof(TMP_Text))]
@@ -15,21 +15,16 @@ namespace ActionCode.Audio
         private TMP_Text text;
         [SerializeField, Min(0), Tooltip("The multiplier used on the volume before showing it.")]
         private int multiplier = 100;
-        [SerializeField, Tooltip("The format used on the volume before showing it. Volume is an Interger value.")]
+        [SerializeField, Tooltip("The format used on the volume before showing it. Volume is an Integer value.")]
         private string format = "D2";
 
-        protected override void Reset()
-        {
-            base.Reset();
-            text = GetComponent<TMP_Text>();
-        }
+        private void Reset() => text = GetComponent<TMP_Text>();
+        private void OnEnable() => settings.OnVolumeChanged += HandleVolumeChanged;
+        private void OnDisable() => settings.OnVolumeChanged -= HandleVolumeChanged;
 
-        private void OnEnable() => audioGroup.OnVolumeChanged += HandleVolumeChanged;
-        private void OnDisable() => audioGroup.OnVolumeChanged -= HandleVolumeChanged;
+        protected override void SetInitialValue() => SetText(settings.Volume);
 
-        protected override void SetInitialValue() => SetText(audioGroup.Volume);
-
-        private void HandleVolumeChanged(float volume) => SetText(volume);
+        private void HandleVolumeChanged() => SetText(settings.Volume);
 
         private void SetText(float volume)
         {

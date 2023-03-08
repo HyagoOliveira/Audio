@@ -5,7 +5,7 @@ using UnityEngine.UI;
 namespace ActionCode.Audio
 {
     /// <summary>
-    /// UI Slider component controlling the <see cref="AudioGroup.Volume"/>.
+    /// UI Slider component controlling the <see cref="AudioGroupSettings.Volume"/>.
     /// </summary>
     [DisallowMultipleComponent]
     [RequireComponent(typeof(Slider))]
@@ -14,34 +14,13 @@ namespace ActionCode.Audio
         [SerializeField, Tooltip("The local Slider controlling the Volume.")]
         private Slider slider;
 
-        protected override void Reset()
-        {
-            base.Reset();
-            slider = GetComponent<Slider>();
-        }
+        private void Reset() => slider = GetComponent<Slider>();
+        private void OnEnable() => slider.onValueChanged.AddListener(HandleValueChanged);
+        private void OnDisable() => slider.onValueChanged.RemoveListener(HandleValueChanged);
 
-        private void OnEnable()
-        {
-            slider.onValueChanged.AddListener(HandleValueChanged);
-            audioGroup.OnInteractableChanged += HandleInteractableChanged;
-        }
+        protected override void SetInitialValue() => slider.SetValueWithoutNotify(settings.Volume);
 
-        private void OnDisable()
-        {
-            slider.onValueChanged.RemoveListener(HandleValueChanged);
-            audioGroup.OnInteractableChanged -= HandleInteractableChanged;
-        }
-
-        protected override void SetInitialValue() =>
-            slider.SetValueWithoutNotify(audioGroup.Volume);
-
-        private void HandleValueChanged(float volume) => audioGroup.Volume = volume;
-
-        private void HandleInteractableChanged(bool interactable)
-        {
-            slider.interactable = interactable;
-            slider.SetValueWithoutNotify(audioGroup.Volume);
-        }
+        private void HandleValueChanged(float volume) => settings.Volume = volume;
     }
 }
 #endif

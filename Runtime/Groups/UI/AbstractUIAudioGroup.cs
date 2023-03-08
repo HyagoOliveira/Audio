@@ -3,14 +3,13 @@ using UnityEngine;
 namespace ActionCode.Audio
 {
     /// <summary>
-    /// Abstract UI component for <see cref="AudioGroup"/>.
+    /// Abstract UI component for <see cref="AudioGroupSettings"/>.
     /// </summary>
     public abstract class AbstractUIAudioGroup : MonoBehaviour
     {
-        [SerializeField, Tooltip("The parent AudioGroup component.")]
-        protected AudioGroup audioGroup;
+        [SerializeField, Tooltip("The Audio Group Settings.")]
+        protected AudioGroupSettings settings;
 
-        protected virtual void Reset() => audioGroup = GetComponentInParent<AudioGroup>();
         protected virtual void Start() => SetInitialValue();
 
         protected abstract void SetInitialValue();

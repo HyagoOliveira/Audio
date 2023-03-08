@@ -8,16 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - VoiceEffects into DefaultAudioMixer
-- OnVolumeChanged and OnInteractableChanged into AudioGroup
-- SliderAudioGroup component
-- TextMeshProAudioGroup component
-- AudioSourceAudioGroup component
-- AudioSourceExtension
-- AudioGroupSettings
-- AmbientEffectsVolumeGroupSettings asset
-- BackgroundVolumeGroupSettings asset
-- SoundEffectsVolumeGroupSettings asset
-- VoiceEffectsVolumeGroupSettings asset
+- AudioSourceExtension class
+- SliderAudioGroup, TextMeshProAudioGroup and AudioSourceAudioGroup components
+- AudioGroupSettings ScriptableObject class
+- AmbientEffects, Background, SoundEffects and VoiceEffects VolumeGroupSettings assets
 
 ### Changed
 - Remove DisallowMultipleComponent attribute from AudioSourceDictionary
