@@ -33,8 +33,8 @@ namespace ActionCode.Audio
         {
             get
             {
-                var hasVolume = mixer.GetFloat(volumeParamName, out float volume);
-                return hasVolume ? DecibelToLinear(volume) : 0F;
+                var hasVolumeParam = mixer.GetFloat(volumeParamName, out float volume);
+                return hasVolumeParam ? DecibelToLinear(volume) : 0F;
             }
             set
             {
@@ -45,6 +45,12 @@ namespace ActionCode.Audio
 
         private const float maxVolumeDB = 20F;
         private const float minVolumeDB = -80F;
+
+        /// <summary>
+        /// Checks if the Audio Group has Volume.
+        /// </summary>
+        /// <returns>Whether the Audio Group has Volume.</returns>
+        public bool HasVolume() => !Mathf.Approximately(Volume, 0f);
 
         private static float DecibelToLinear(float value) => Mathf.Pow(10F, value / maxVolumeDB);
 
