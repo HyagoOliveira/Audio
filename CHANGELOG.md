@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - SliderAudioGroup, TextMeshProAudioGroup and AudioSourceAudioGroup components
 - AudioGroupSettings ScriptableObject class
 - AmbientEffects, Background, SoundEffects and VoiceEffects Group Settings assets
+- No Effects Snapshot
 
 ### Changed
 - Remove DisallowMultipleComponent attribute from AudioSourceDictionary
