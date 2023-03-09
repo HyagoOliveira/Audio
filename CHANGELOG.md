@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - VoiceEffects into DefaultAudioMixer
 - AudioSourceExtension class
-- SliderAudioGroup, TextMeshProAudioGroup and AudioSourceAudioGroup components
+- SliderAudioGroup component
+- TextMeshProAudioGroup component
 - AudioGroupSettings ScriptableObject class
 - AmbientEffects, Background, SoundEffects and VoiceEffects Group Settings assets
 - No Effects Snapshot
