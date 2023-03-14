@@ -24,22 +24,22 @@ namespace ActionCode.Audio
         /// <param name="data">The audio data to load.</param>
         public void Load(AudioData data)
         {
-            if (backgroundGroup) backgroundGroup.Volume = data.BackgroundVolume;
-            if (soundEffectsGroup) soundEffectsGroup.Volume = data.SoundEffectsVolume;
-            if (voiceEffectsGroup) voiceEffectsGroup.Volume = data.AmbientEffectsVolume;
-            if (ambientEffectsGroup) ambientEffectsGroup.Volume = data.AmbientEffectsVolume;
+            backgroundGroup.Volume = data.BackgroundVolume;
+            soundEffectsGroup.Volume = data.SoundEffectsVolume;
+            voiceEffectsGroup.Volume = data.AmbientEffectsVolume;
+            ambientEffectsGroup.Volume = data.AmbientEffectsVolume;
         }
 
         /// <summary>
-        /// Saves all groups into the given data.
+        /// Writes all groups into the given data.
         /// </summary>
-        /// <param name="data">The audio data to save.</param>
-        public void Save(ref AudioData data)
+        /// <param name="data">The audio data to write in.</param>
+        public void Write(ref AudioData data)
         {
-            if (backgroundGroup) data.BackgroundVolume = backgroundGroup.Volume;
-            if (soundEffectsGroup) data.SoundEffectsVolume = soundEffectsGroup.Volume;
-            if (voiceEffectsGroup) data.VoiceEffectsVolume = voiceEffectsGroup.Volume;
-            if (ambientEffectsGroup) data.AmbientEffectsVolume = ambientEffectsGroup.Volume;
+            data.BackgroundVolume = backgroundGroup.Volume;
+            data.SoundEffectsVolume = soundEffectsGroup.Volume;
+            data.VoiceEffectsVolume = voiceEffectsGroup.Volume;
+            data.AmbientEffectsVolume = ambientEffectsGroup.Volume;
         }
 
         /// <summary>
@@ -47,10 +47,10 @@ namespace ActionCode.Audio
         /// </summary>
         public void ResetVolumes()
         {
-            backgroundGroup?.ResetVolume();
-            soundEffectsGroup?.ResetVolume();
-            voiceEffectsGroup?.ResetVolume();
-            ambientEffectsGroup?.ResetVolume();
+            backgroundGroup.ResetVolume();
+            soundEffectsGroup.ResetVolume();
+            voiceEffectsGroup.ResetVolume();
+            ambientEffectsGroup.ResetVolume();
         }
     }
 }
