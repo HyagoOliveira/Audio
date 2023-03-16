@@ -7,6 +7,16 @@
 
 ## How To Use
 
+### Default Audio Mixer
+
+You may use the Audio Mixer provided by this package.
+
+![Default Audio Mixer](/Docs~/DefaultAudioMixer.png "The Default Audio Mixer")
+
+This Mixer contains a Main, Background, Sound Effects, Ambient Effects and Voice Effects groups; each one with its *volume* exposed.
+
+### Other Components
+
 * **AudibleParticleSystem**: component used to play, stop, pause and resume both **AudioSource** and **ParticleSystem** components attached to the **GameObject**.
 * **AudioSourceDictionary**: plays audio clips shots using an **AudioSource** component and an **AudioClip** array.
 * **Presets**: presets assets for **background** music, **frequently** and **rarely** played audio clips.
