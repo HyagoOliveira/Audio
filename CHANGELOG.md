@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [3.0.0] - 2023-03-16
+
 ### Added
 - VoiceEffects into DefaultAudioMixer
 - AudioSourceExtension class
@@ -52,7 +54,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add initial files
 - Initial commit
 
-[Unreleased]: https://github.com/HyagoOliveira/Audio/compare/2.0.0...main
+[Unreleased]: https://github.com/HyagoOliveira/Audio/compare/3.0.0...main
+[3.0.0]: https://github.com/HyagoOliveira/Audio/tree/3.0.0/
 [2.0.0]: https://github.com/HyagoOliveira/Audio/tree/2.0.0/
 [1.1.0]: https://github.com/HyagoOliveira/Audio/tree/1.1.0/
 [1.0.0]: https://github.com/HyagoOliveira/Audio/tree/1.0.0/
