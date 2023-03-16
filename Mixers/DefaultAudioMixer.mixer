@@ -121,6 +121,8 @@ AudioMixerController:
     name: AmbientEffectsVolume
   - guid: a973c776455edb94b84e7d6f5b7535bf
     name: BackgroundVolume
+  - guid: 22526846bfefc9d439a4bf2963f10e65
+    name: MasterVolume
   - guid: 6a1277ade53aa1e41afc810d4d90da98
     name: SoundEffectsVolume
   - guid: a7d5347ac81a2f34c891fe6e16b90a3f
@@ -134,7 +136,7 @@ AudioMixerController:
     - a299ca6f5a7b9fd42bcdeee5c13b43c8
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: -8243054134780536814}
+  m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
