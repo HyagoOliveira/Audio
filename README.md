@@ -9,11 +9,15 @@
 
 ### Default Audio Mixer
 
-You may use the Audio Mixer provided by this package.
+You may use the [Audio Mixer](/Mixers/DefaultAudioMixer.mixer) provided by this package.
 
 ![Default Audio Mixer](/Docs~/DefaultAudioMixer.png "The Default Audio Mixer")
 
-This Mixer contains a Main, Background, Sound Effects, Ambient Effects and Voice Effects groups; each one with its *volume* exposed.
+This Mixer contains a Main, Background, Sound Effects, Ambient Effects and Voice Effects groups; each one with its *Volume* property exposed.
+
+### Presets
+
+There are common Audio Clip presets presents on the [Presets](/Presets) folder. Use them on Audio Clips depending on how frequently they should play. 
 
 ### Other Components
 
