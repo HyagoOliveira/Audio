@@ -17,10 +17,19 @@ This Mixer contains a Main, Background, Sound Effects, Ambient Effects and Voice
 
 ### Presets
 
-There are common Audio Clip presets presents on the [Presets](/Presets) folder. Use them on Audio Clips depending on how frequently they should play. 
+There are common Audio Clip presets presents on the [Presets](/Presets) folder. 
+
+Use them on Audio Clips depending on how frequently they should play. 
+
+### Serialization
+
+Use the [AudioData](/Runtime/Serialization/AudioData.cs) class with you serialization solution in order to persist audio related data. 
 
 ### Other Components
 
+* **SliderAudioGroup**: Makes a local Slider component controls a given AudioMixer Volume parameter. You have to select a corresponding AudioGroupSettings.
+* **TextMeshProAudioGroup**: Sets a local Text Mesh Pro to display a given AudioMixer Volume parameter. You have to select a corresponding AudioGroupSettings
+This component is only available if you have installed the Text Mesh Pro package.
 * **AudibleParticleSystem**: component used to play, stop, pause and resume both **AudioSource** and **ParticleSystem** components attached to the **GameObject**.
 * **AudioSourceDictionary**: plays audio clips shots using an **AudioSource** component and an **AudioClip** array.
 * **Presets**: presets assets for **background** music, **frequently** and **rarely** played audio clips.
