@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - SliderAudioGroup component
 - TextMeshProAudioGroup component
 - AudioGroupSettings ScriptableObject class
-- AmbientEffects, Background, SoundEffects and VoiceEffects Group Settings assets
+- Master, Background, Ambient Effects, Sound Effects and Voice Effects Audio Group Settings assets
 - No Effects Snapshot
 - AudioSettings Scriptable Object and asset
 
