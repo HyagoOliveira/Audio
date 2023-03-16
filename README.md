@@ -13,13 +13,13 @@ You may use the [Audio Mixer](/Mixers/DefaultAudioMixer.mixer) provided by this 
 
 ![Default Audio Mixer](/Docs~/DefaultAudioMixer.png "The Default Audio Mixer")
 
-This Mixer contains a Main, Background, Sound Effects, Ambient Effects and Voice Effects groups; each one with its *Volume* property exposed.
+This Mixer contains a *Main*, *Background*, *Sound Effects*, *Ambient Effects* and *Voice Effects* groups; each one with its own exposed *Volume* property.
 
 ### Presets
 
 There are common Audio Clip presets presents on the [Presets](/Presets) folder. 
 
-Use them on Audio Clips depending on how frequently they should play. 
+Use them on Audio Clip assets depending on how frequently they should play. 
 
 ### Serialization
 
@@ -27,12 +27,11 @@ Use the [AudioData](/Runtime/Serialization/AudioData.cs) class with you serializ
 
 ### Other Components
 
-* **SliderAudioGroup**: Makes a local Slider component controls a given AudioMixer Volume parameter. You have to select a corresponding AudioGroupSettings.
-* **TextMeshProAudioGroup**: Sets a local Text Mesh Pro to display a given AudioMixer Volume parameter. You have to select a corresponding AudioGroupSettings
-This component is only available if you have installed the Text Mesh Pro package.
+* **SliderAudioGroup**: Makes a local *Slider* component controls a given *AudioMixer* Volume parameter. You have to select a corresponding *AudioGroupSettings*.
+* **TextMeshProAudioGroup**: Sets a local *Text Mesh Pro* to display a given *AudioMixer* Volume parameter. You have to select a corresponding *AudioGroupSettings*.
+This component is only available if you have installed the **Text Mesh Pro** package.
 * **AudibleParticleSystem**: component used to play, stop, pause and resume both **AudioSource** and **ParticleSystem** components attached to the **GameObject**.
 * **AudioSourceDictionary**: plays audio clips shots using an **AudioSource** component and an **AudioClip** array.
-* **Presets**: presets assets for **background** music, **frequently** and **rarely** played audio clips.
 
 ## Installation
 
