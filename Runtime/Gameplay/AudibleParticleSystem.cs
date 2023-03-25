@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_PARTICLE_SYSTEM
+using UnityEngine;
 
 namespace ActionCode.Audio
 {
@@ -81,3 +82,4 @@ namespace ActionCode.Audio
         }
     }
 }
+#endif

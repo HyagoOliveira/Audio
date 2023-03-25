@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [3.0.0] - 2023-03-16
 
+### Fixed
+- AudibleParticleSystem checks for Unity Particle System directive
+
 ### Added
 - VoiceEffects into DefaultAudioMixer
 - AudioSourceExtension class
