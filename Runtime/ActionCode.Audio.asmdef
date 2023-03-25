@@ -21,6 +21,11 @@
             "name": "com.unity.textmeshpro",
             "expression": "1.0.0",
             "define": "TEXT_MESH_PRO"
+        },
+        {
+            "name": "com.unity.modules.particlesystem",
+            "expression": "1.0.0",
+            "define": "UNITY_PARTICLE_SYSTEM"
         }
     ],
     "noEngineReferences": false
