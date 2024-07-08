@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - AudioLooper
+- AudioDisabler
 
 ## [3.0.1] - 2023-03-25
 
