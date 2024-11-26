@@ -1,17 +1,18 @@
 using System;
+using UnityEngine;
 
 namespace ActionCode.Audio
 {
     /// <summary>
-    /// Data class for <see cref="AudioManager"/>.
+    /// Data class for Audio.
     /// </summary>
     [Serializable]
     public sealed class AudioData
     {
-        public float BackgroundVolume { get; set; }
-        public float SoundEffectsVolume { get; set; }
-        public float AmbientEffectsVolume { get; set; }
-        public float VoiceEffectsVolume { get; set; }
+        [Range(0f, 1f)] public float backgroundVolume;
+        [Range(0f, 1f)] public float soundEffectsVolume;
+        [Range(0f, 1f)] public float ambientEffectsVolume;
+        [Range(0f, 1f)] public float voiceEffectsVolume;
 
         /// <summary>
         /// Creates an Audio Data with all volumes set to 1F.
@@ -40,10 +41,10 @@ namespace ActionCode.Audio
             float voiceEffectsVolume
         )
         {
-            BackgroundVolume = backgroundVolume;
-            SoundEffectsVolume = soundEffectsVolume;
-            AmbientEffectsVolume = ambientEffectsVolume;
-            VoiceEffectsVolume = voiceEffectsVolume;
+            this.backgroundVolume = backgroundVolume;
+            this.soundEffectsVolume = soundEffectsVolume;
+            this.ambientEffectsVolume = ambientEffectsVolume;
+            this.voiceEffectsVolume = voiceEffectsVolume;
         }
     }
 }
