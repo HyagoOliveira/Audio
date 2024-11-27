@@ -2,7 +2,7 @@
 
 * Audio scripts and presets.
 * Unity minimum version: **2018.3**
-* Current version: **3.1.0**
+* Current version: **4.0.0**
 * License: **MIT**
 
 ## How To Use
@@ -13,11 +13,11 @@ You may use the [Audio Mixer](/Mixers/DefaultAudioMixer.mixer) provided by this 
 
 ![Default Audio Mixer](/Docs~/DefaultAudioMixer.png "The Default Audio Mixer")
 
-This Mixer contains a *Main*, *Background*, *Sound Effects*, *Ambient Effects* and *Voice Effects* groups; each one with its own exposed *Volume* property.
+This Mixer contains a *Main*, *Background*, *Sound Effects*, *Ambient Effects*, *Voice Effects* and Gamepad groups; each one with its own exposed *Volume* property.
 
 ### Presets
 
-There are common Audio Clip presets presents on the [Presets](/Presets) folder. 
+There are common Audio Clip presets inside the [Presets](/Presets) folder. 
 
 Use them on Audio Clip assets depending on how frequently they should play. 
 
