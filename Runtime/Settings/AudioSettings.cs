@@ -17,6 +17,8 @@ namespace ActionCode.Audio
         private AudioGroupSettings voiceEffectsGroup;
         [SerializeField, Tooltip("The Ambient Effects Audio Group.")]
         private AudioGroupSettings ambientEffectsGroup;
+        [SerializeField, Tooltip("The Gamepad Audio Group.")]
+        private AudioGroupSettings gamepadGroup;
 
         /// <summary>
         /// Loads all groups using the given data.
@@ -28,6 +30,7 @@ namespace ActionCode.Audio
             soundEffectsGroup.Volume = data.soundEffectsVolume;
             voiceEffectsGroup.Volume = data.ambientEffectsVolume;
             ambientEffectsGroup.Volume = data.ambientEffectsVolume;
+            gamepadGroup.Volume = data.gamepadVolume;
         }
 
         /// <summary>

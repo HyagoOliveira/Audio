@@ -13,6 +13,7 @@ namespace ActionCode.Audio
         [Range(0f, 1f)] public float soundEffectsVolume;
         [Range(0f, 1f)] public float ambientEffectsVolume;
         [Range(0f, 1f)] public float voiceEffectsVolume;
+        [Range(0f, 1f)] public float gamepadVolume;
 
         /// <summary>
         /// Creates an Audio Data with all volumes set to 1F.
@@ -24,7 +25,7 @@ namespace ActionCode.Audio
         /// </summary>
         /// <param name="volume">The volume amount.</param>
         public AudioData(float volume) :
-            this(volume, volume, volume, volume)
+            this(volume, volume, volume, volume, volume)
         { }
 
         /// <summary>
@@ -38,13 +39,15 @@ namespace ActionCode.Audio
             float backgroundVolume,
             float soundEffectsVolume,
             float ambientEffectsVolume,
-            float voiceEffectsVolume
+            float voiceEffectsVolume,
+            float gamepadVolume
         )
         {
             this.backgroundVolume = backgroundVolume;
             this.soundEffectsVolume = soundEffectsVolume;
             this.ambientEffectsVolume = ambientEffectsVolume;
             this.voiceEffectsVolume = voiceEffectsVolume;
+            this.gamepadVolume = gamepadVolume;
         }
     }
 }
