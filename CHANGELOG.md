@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Gamepad Group Settings
 
 ### Changed
+- Refact AudioData volumes from float into uint (0F -> 1F to 0 -> 100)
 - Refact AudioData properties into fields
 
 ## [3.1.0] - 2024-07-08

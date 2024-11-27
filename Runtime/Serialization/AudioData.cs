@@ -9,22 +9,19 @@ namespace ActionCode.Audio
     [Serializable]
     public sealed class AudioData
     {
-        [Range(0f, 1f)] public float backgroundVolume;
-        [Range(0f, 1f)] public float soundEffectsVolume;
-        [Range(0f, 1f)] public float ambientEffectsVolume;
-        [Range(0f, 1f)] public float voiceEffectsVolume;
-        [Range(0f, 1f)] public float gamepadVolume;
+        [Range(0, maxVolume)] public uint backgroundVolume;
+        [Range(0, maxVolume)] public uint soundEffectsVolume;
+        [Range(0, maxVolume)] public uint ambientEffectsVolume;
+        [Range(0, maxVolume)] public uint voiceEffectsVolume;
+        [Range(0, maxVolume)] public uint gamepadVolume;
 
-        /// <summary>
-        /// Creates an Audio Data with all volumes set to 1F.
-        /// </summary>
-        public AudioData() : this(1F) { }
+        private const uint maxVolume = 100;
 
         /// <summary>
         /// Creates an Audio Data using the given volume for all.
         /// </summary>
         /// <param name="volume">The volume amount.</param>
-        public AudioData(float volume) :
+        public AudioData(uint volume = maxVolume) :
             this(volume, volume, volume, volume, volume)
         { }
 
@@ -36,11 +33,11 @@ namespace ActionCode.Audio
         /// <param name="ambientEffectsVolume">The ambient effects volume amount.</param>
         /// <param name="voiceEffectsVolume">The voice effects volume amount.</param>
         public AudioData(
-            float backgroundVolume,
-            float soundEffectsVolume,
-            float ambientEffectsVolume,
-            float voiceEffectsVolume,
-            float gamepadVolume
+            uint backgroundVolume,
+            uint soundEffectsVolume,
+            uint ambientEffectsVolume,
+            uint voiceEffectsVolume,
+            uint gamepadVolume
         )
         {
             this.backgroundVolume = backgroundVolume;

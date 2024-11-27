@@ -31,8 +31,7 @@ namespace ActionCode.Audio
         protected override void SetInitialValue() => SetSliderToVolume();
 
         private void HandleVolumeChanged() => SetSliderToVolume();
-
-        private void HandleValueChanged(float volume) => settings.Volume = volume;
+        private void HandleValueChanged(float volume) => settings.Volume = (uint)volume;
 
         private void SetSliderToVolume() => slider.SetValueWithoutNotify(settings.Volume);
     }
