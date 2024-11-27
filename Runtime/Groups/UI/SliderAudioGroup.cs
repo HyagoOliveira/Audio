@@ -6,6 +6,7 @@ namespace ActionCode.Audio
 {
     /// <summary>
     /// UI Slider component controlling the <see cref="AudioGroupSettings.Volume"/>.
+    /// Your slide should be from 0 -> 100, using integer values.
     /// </summary>
     [DisallowMultipleComponent]
     [RequireComponent(typeof(Slider))]
@@ -31,9 +32,11 @@ namespace ActionCode.Audio
         protected override void SetInitialValue() => SetSliderToVolume();
 
         private void HandleVolumeChanged() => SetSliderToVolume();
-        private void HandleValueChanged(float volume) => settings.Volume = (uint)volume;
+        private void HandleValueChanged(float _) => settings.Volume = GetLinearVolume(slider.normalizedValue);
 
         private void SetSliderToVolume() => slider.SetValueWithoutNotify(settings.Volume);
+
+        private static uint GetLinearVolume(float normalizedVolume) => (uint)(normalizedVolume * 100);
     }
 }
 #endif
