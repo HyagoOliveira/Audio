@@ -34,6 +34,13 @@ namespace ActionCode.Audio
         public void PlayRandom() => source.PlayOneShot(Dictionary.GetRandomClip());
 
         /// <summary>
+        /// <inheritdoc cref="Play(string)"/>
+        /// <para>Use this function inside Audio Clips.</para>
+        /// </summary>
+        /// <param name="name"><inheritdoc cref="AudioDictionary.GetClip(string)"/></param>
+        public void PlaySoundEffect(string name) => Play(name);
+
+        /// <summary>
         /// Pauses the Audio Source.
         /// </summary>
         public void Pause() => source.Pause();
