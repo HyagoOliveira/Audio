@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [4.2.0] - 2025-09-25
 ### Changed
 - Rename AudioData Volume fields to CamelCase
 
@@ -26,12 +28,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - AudioDisabler
 
 ## [3.0.1] - 2023-03-25
-
 ### Fixed
 - AudibleParticleSystem checks for Unity Particle System directive
 
 ## [3.0.0] - 2023-03-16
-
 ### Added
 - VoiceEffects into DefaultAudioMixer
 - AudioSourceExtension class
@@ -54,7 +54,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - AudioGroupManager component
 
 ## [2.0.0] - 2023-01-24
-
 ### Changed
 - AudioSourceDictionary uses AudioDictionary class.
 
@@ -78,7 +77,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add initial files
 - Initial commit
 
-[Unreleased]: https://github.com/HyagoOliveira/Audio/compare/4.1.0...main
+[Unreleased]: https://github.com/HyagoOliveira/Audio/compare/4.2.0...main
+[4.2.0]: https://github.com/HyagoOliveira/Audio/tree/4.1.0/
 [4.1.0]: https://github.com/HyagoOliveira/Audio/tree/4.1.0/
 [4.0.0]: https://github.com/HyagoOliveira/Audio/tree/4.0.0/
 [3.1.0]: https://github.com/HyagoOliveira/Audio/tree/3.1.0/
