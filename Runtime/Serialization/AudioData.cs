@@ -9,11 +9,11 @@ namespace ActionCode.Audio
     [Serializable]
     public sealed class AudioData
     {
-        [Range(0, maxVolume)] public uint backgroundVolume;
-        [Range(0, maxVolume)] public uint soundEffectsVolume;
-        [Range(0, maxVolume)] public uint ambientEffectsVolume;
-        [Range(0, maxVolume)] public uint voiceEffectsVolume;
-        [Range(0, maxVolume)] public uint gamepadVolume;
+        [Range(0, maxVolume)] public uint BackgroundVolume;
+        [Range(0, maxVolume)] public uint SoundEffectsVolume;
+        [Range(0, maxVolume)] public uint AmbientEffectsVolume;
+        [Range(0, maxVolume)] public uint VoiceEffectsVolume;
+        [Range(0, maxVolume)] public uint GamepadVolume;
 
         private const uint maxVolume = 100;
 
@@ -40,11 +40,11 @@ namespace ActionCode.Audio
             uint gamepadVolume
         )
         {
-            this.backgroundVolume = backgroundVolume;
-            this.soundEffectsVolume = soundEffectsVolume;
-            this.ambientEffectsVolume = ambientEffectsVolume;
-            this.voiceEffectsVolume = voiceEffectsVolume;
-            this.gamepadVolume = gamepadVolume;
+            BackgroundVolume = backgroundVolume;
+            SoundEffectsVolume = soundEffectsVolume;
+            AmbientEffectsVolume = ambientEffectsVolume;
+            VoiceEffectsVolume = voiceEffectsVolume;
+            GamepadVolume = gamepadVolume;
         }
     }
 }

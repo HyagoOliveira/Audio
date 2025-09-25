@@ -26,11 +26,11 @@ namespace ActionCode.Audio
         /// <param name="data">The audio data to load.</param>
         public void Load(AudioData data)
         {
-            backgroundGroup.Volume = data.backgroundVolume;
-            soundEffectsGroup.Volume = data.soundEffectsVolume;
-            voiceEffectsGroup.Volume = data.ambientEffectsVolume;
-            ambientEffectsGroup.Volume = data.ambientEffectsVolume;
-            gamepadGroup.Volume = data.gamepadVolume;
+            backgroundGroup.Volume = data.BackgroundVolume;
+            soundEffectsGroup.Volume = data.SoundEffectsVolume;
+            voiceEffectsGroup.Volume = data.AmbientEffectsVolume;
+            ambientEffectsGroup.Volume = data.AmbientEffectsVolume;
+            gamepadGroup.Volume = data.GamepadVolume;
         }
 
         /// <summary>
@@ -39,10 +39,10 @@ namespace ActionCode.Audio
         /// <param name="data">The audio data to write in.</param>
         public void Write(ref AudioData data)
         {
-            data.backgroundVolume = backgroundGroup.Volume;
-            data.soundEffectsVolume = soundEffectsGroup.Volume;
-            data.voiceEffectsVolume = voiceEffectsGroup.Volume;
-            data.ambientEffectsVolume = ambientEffectsGroup.Volume;
+            data.BackgroundVolume = backgroundGroup.Volume;
+            data.SoundEffectsVolume = soundEffectsGroup.Volume;
+            data.VoiceEffectsVolume = voiceEffectsGroup.Volume;
+            data.AmbientEffectsVolume = ambientEffectsGroup.Volume;
         }
 
         /// <summary>
